@@ -1,0 +1,10 @@
+site_name: Echo's Notebook #必填，网站标题
+site_url: https://notebook.echoesran.cc/ #最终的网站网址
+repo_name: Echoesran/notebook 
+repo_url: https://github.com/Echoesran/notebook.echoesran.cc #对应的 GitHub repo 的链接，用于 deploy 和右上角的链接
+site_description: Echo's Notebook #站点描述
+copyright: Copyright &copy; 2025 <a href="https://github.com/Echoesran" target="_blank" rel="noopener">Echoesran</a>
+
+theme: 
+  name: 'material'
+  language: 'zh'
