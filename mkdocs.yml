@@ -1,10 +1,84 @@
-site_name: Echo's Notebook #必填，网站标题
-site_url: https://notebook.echoesran.cc/ #最终的网站网址
-repo_name: Echoesran/notebook 
-repo_url: https://github.com/Echoesran/notebook.echoesran.cc #对应的 GitHub repo 的链接，用于 deploy 和右上角的链接
 site_description: Echo's Notebook #站点描述
 copyright: Copyright &copy; 2025 <a href="https://github.com/Echoesran" target="_blank" rel="noopener">Echoesran</a>
-
+#？？？版权信息有待完善，可以加备案
+#[UI]
 theme: 
   name: 'material'
-  language: 'zh'
+  language: 'zh' #中文
+  icon: 
+    logo: material/notebook-outline
+  #font: false
+  #？？？字体设置 https://github.com/lxgw/LxgwWenKai-Screen?tab=readme-ov-file
+  palette:
+    - primary: black #顶部颜色
+    - media: "(prefers-color-scheme: light)"
+      scheme: default #日间模式
+      toggle:
+        icon: material/brightness-night #图标，参考 https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+        name: 切换至夜间模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate #夜间模式
+      toggle:
+        icon: material/brightness-sunny
+        name: 切换至日间模式
+  features:
+    - content.code.copy # 代码块复制按键
+    - content.code.annotate # 代码块中增添点击展示的注释，参考 https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations
+    - navigation.footer # 页面底部有下一页的链接(按目录上的顺序)
+    - navigation.tracking # 地址栏中的 URL 会随当前位置变化为对应小节的 URL
+    - navigation.tabs #一级导航在横着的导航栏
+    - navigation.indexes #将 index 页面直接附到小节名上
+    - navigation.top # 回到顶部按钮
+    - search.highlight # 搜索出的文章关键词加入高亮
+    - search.share #搜索分享按钮
+    - search.suggest # 搜索建议
+markdown_extensions: #详见https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/ 和 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  # - meta # 支持Markdown文件上方自定义标题标签等
+  - pymdownx.caret
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
+  - pymdownx.arithmatex: # latex支持
+      generic: true
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+plugins:
+  - search
+nav:
+  - 主页:
+  - 编程语言:
+  - 机器学习:
+  - 深度学习:
+  - 计算机系统:
+  - 市场营销:
+    - 大数据营销: Marketing/Big Data/CH_1_big_data.md
+  - 杂谈与总结:
