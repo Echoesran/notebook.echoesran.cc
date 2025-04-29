@@ -82,6 +82,7 @@ plugins:
   - search
 nav:
   - "主页":
+    - index.md
   - "编程语言":
   - "机器学习":
   - "深度学习":
