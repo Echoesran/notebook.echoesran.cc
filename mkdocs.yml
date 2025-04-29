@@ -11,7 +11,7 @@ copyright: Copyright &copy; 2025 <a href="https://github.com/Echoesran" target="
 theme: 
   name: material
   language: zh #中文
-  custom_dir: overrides
+  #custom_dir: overrides
   icon: 
     logo: material/notebook-outline
   font: LXGW WenKai
