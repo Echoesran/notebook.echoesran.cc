@@ -12,8 +12,8 @@ theme:
   name: material
   language: zh #中文
   #custom_dir: overrides
-  icon: 
-    logo: material/notebook-outline
+  #icon: 
+    #logo: material/notebook-outline
   font: LXGW WenKai
   code: JetBrains Mono #字体设置 https://github.com/lxgw/LxgwWenKai-Screen?tab=readme-ov-file
   palette:
