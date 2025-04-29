@@ -81,8 +81,7 @@ markdown_extensions: #详见https://squidfunk.github.io/mkdocs-material/setup/ex
 plugins:
   - search
 nav:
-  - "主页":
-    - index.md
+  - "主页": index.md
   - "市场营销":
     - "大数据营销": 
       - Marketing/Big_Data/CH_01.md
